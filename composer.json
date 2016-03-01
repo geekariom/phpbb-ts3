@@ -2,9 +2,9 @@
 	"name": "matthieuy/teamspeak",
 	"type": "phpbb-extension",
 	"description": "Teamspeak 3 for phpBB 3.1",
-	"homepage": "https://bitbucket.org/matthieuy/phpbb-ts3",
+	"homepage": "https://github.com/geekariom/phpbb-ts3",
 	"version": "1.0.0",
-	"time": "2015-08-30",
+	"time": "2016-03-01",
 	"license": "GPL-2.0",
 	"authors": [{
 			"name": "Matthieu YK",

@@ -1,7 +1,7 @@
 Teamspeak extension for phpbb 3.1.x
 ===================================
 
-[https://bitbucket.org/matthieuy/phpbb-ts3](https://bitbucket.org/matthieuy/phpbb-ts3)
+[https://github.com/geekariom/phpbb-ts3](https://github.com/geekariom/phpbb-ts3)
 
 WIP
 ===
