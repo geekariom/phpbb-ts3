@@ -1,0 +1,12 @@
+{% if U_TEAMSPEAK %}
+    <li class="tab teamspeak{% if TEAMSPEAK_STATS.nbr > 0 %} non-zero{% endif %}" data-select-match="teamspeak" data-responsive-class="small-icon icon-teamspeak">
+        <a class="nav-link" href="{U_TEAMSPEAK}" title="{L_TS3}" role="menuitem">
+            {L_TS3}
+        </a>
+        <strong>
+            <span class="counter">{TEAMSPEAK_STATS.nbr}</span>
+            <span class="arrow"></span>
+        </strong>
+    </li>
+    <!-- INCLUDEJS teamspeak_nb.js -->
+{% endif %}

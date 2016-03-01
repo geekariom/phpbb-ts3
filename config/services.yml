@@ -1,0 +1,45 @@
+services:
+    # The main controller
+    matthieuy.teamspeak.controller:
+        class: matthieuy\teamspeak\controller\TeamspeakController
+        arguments:
+            - @controller.helper
+            - @template
+            - @user
+            - @auth
+            - @matthieuy.teamspeak.service
+            - @config
+
+    # Listener
+    matthieuy.teamspeak.listener:
+        class: matthieuy\teamspeak\event\listener
+        arguments:
+            - @controller.helper
+            - @user
+            - @template
+            - @auth
+            - @config
+            - @matthieuy.teamspeak.service
+        tags:
+            - { name: event.listener }
+
+    # Service
+    matthieuy.teamspeak.service:
+        class: matthieuy\teamspeak\services\Teamspeak
+        arguments:
+            - @config
+            - @auth
+            - @cache
+            - @dbal.conn
+            - @user
+
+    # Command
+    matthieuy.teamspeak.command.stat:
+        class: matthieuy\teamspeak\command\stats
+        arguments:
+            - @user
+            - @matthieuy.teamspeak.service
+            - @dbal.conn
+            - %core.root_path%
+        tags:
+            - { name: console.command }

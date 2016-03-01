@@ -1,0 +1,27 @@
+{
+	"name": "matthieuy/teamspeak",
+	"type": "phpbb-extension",
+	"description": "Teamspeak 3 for phpBB 3.1",
+	"homepage": "https://bitbucket.org/matthieuy/phpbb-ts3",
+	"version": "1.0.0",
+	"time": "2015-08-30",
+	"license": "GPL-2.0",
+	"authors": [{
+			"name": "Matthieu YK",
+			"email": "yk@openmailbox.org",
+			"role": "Lead Developer"
+		}],
+	"require": {
+		"php": ">=5.3.3",
+		"planetteamspeak/ts3-php-framework": "^1.1"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Teamspeak",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+		}
+	}
+}

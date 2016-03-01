@@ -1,0 +1,16 @@
+# Teamspeak page
+matthieuy_teamspeak_index:
+    path: /teamspeak
+    defaults: { _controller: matthieuy.teamspeak.controller:index }
+
+# Ajax request
+matthieuy_teamspeak_ajax:
+    path: /teamspeak/ajax
+    defaults: { _controller: matthieuy.teamspeak.controller:ajax }
+    methods: ['POST']
+
+# Nbr of users
+matthieuy_teamspeak_nb:
+    path: /teamspeak/ajax-nb
+    defaults: { _controller: matthieuy.teamspeak.controller:nb }
+    methods: ['POST']

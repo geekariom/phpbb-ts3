@@ -1,0 +1,86 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_SETTINGS}</h1>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+	<fieldset>
+		<dl>
+			<dt>
+				<label for="ts3_query_url">{L_ACP_TS3_QUERY_URL}</label><br>
+				<span>{L_ACP_TS3_QUERY_URL_HELP}</span>
+			</dt>
+			<dd>
+				<input id="ts3_query_url" name="ts3_query_url" type="text" value="{TS3_QUERY_URL}" required="required">
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="ts3_query_user">{L_ACP_TS3_QUERY_USER}</label><br>
+				<span>{L_ACP_TS3_QUERY_USER_HELP}</span>
+			</dt>
+			<dd>
+				<input id="ts3_query_user" name="ts3_query_user" type="text" value="{TS3_QUERY_USER}" required="required">
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="ts3_query_pwd">{L_ACP_TS3_QUERY_PWD}</label><br>
+				<span>{L_ACP_TS3_QUERY_PWD_HELP}</span>
+			</dt>
+			<dd>
+				<input id="ts3_query_pwd" name="ts3_query_pwd" type="text" value="{TS3_QUERY_PWD}" required="required">
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="ts3_query_port">{L_ACP_TS3_QUERY_PORT}</label><br>
+				<span>{L_ACP_TS3_QUERY_PORT_HELP}</span>
+			</dt>
+			<dd>
+				<input id="ts3_query_port" name="ts3_query_port" type="text" value="{TS3_QUERY_PORT}" required="required">
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="ts3_server_url">{L_ACP_TS3_SERVER_URL}</label><br>
+				<span>{L_ACP_TS3_SERVER_URL_HELP}</span>
+			</dt>
+			<dd>
+				<input id="ts3_server_url" name="ts3_server_url" type="text" value="{TS3_SERVER_URL}" required="required">
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="ts3_server_port">{L_ACP_TS3_SERVER_PORT}</label><br>
+				<span>{L_ACP_TS3_SERVER_PORT_HELP}</span>
+			</dt>
+			<dd>
+				<input id="ts3_server_port" name="ts3_server_port" type="text" value="{TS3_SERVER_PORT}" required="required">
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="ts3_server_pwd">{L_ACP_TS3_SERVER_PWD}</label><br>
+				<span>{L_ACP_TS3_SERVER_PWD_HELP}</span>
+			</dt>
+			<dd>
+				<input id="ts3_server_pwd" name="ts3_server_pwd" type="text" value="{TS3_SERVER_PWD}">
+			</dd>
+		</dl>
+		<dl>
+			<dt><label>{L_ACP_TS3_COUNT}</label></dt>
+			<dd>
+				<input type="radio" class="radio" name="ts3_count" value="1" <!-- IF TS3_COUNT -->checked="checked"<!-- ENDIF -->> {L_YES} &nbsp;
+				<input type="radio" class="radio" name="ts3_count" value="0" <!-- IF not TS3_COUNT -->checked="checked"<!-- ENDIF -->> {L_NO}
+			</dd>
+		</dl>
+
+		<p class="submit-buttons">
+			<input class="button1" type="submit" name="submit" value="{L_SUBMIT}">&nbsp;
+			<input class="button2" type="reset" name="reset" value="{L_RESET}">
+		</p>
+
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

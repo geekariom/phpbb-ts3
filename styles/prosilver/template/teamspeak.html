@@ -1,0 +1,118 @@
+<!-- INCLUDECSS teamspeak.css -->
+<!-- INCLUDEJS teamspeak.js -->
+<!-- INCLUDE overall_header.html -->
+
+<div class="forumbg">
+    <div class="inner">
+        <ul class="topiclist">
+            <li class="header">
+                <dl>
+                    <dt>{L_TS3_SERVER_STAT}</dt>
+                </dl>
+            </li>
+        </ul>
+        <div class="panel text-center">
+            {L_TS3_SERVER_STAT} : <strong style="color: #FF590E;" id="ts3-status" data-progress="{L_TS3_SEARCH_PROGRESS}">{L_TS3_SEARCH_PROGRESS}</strong>
+            <br />
+            <a href="#" id="ts3-link" class="button1">{L_TS3_JOIN_SRV}</a>
+        </div>
+    </div>
+</div><br>
+
+<div class="forumbg">
+    <div class="inner">
+        <ul class="topiclist">
+            <li class="header">
+                <dl>
+                    <dt>{L_TS3_SERVER_CONFIG}</dt>
+                </dl>
+            </li>
+        </ul>
+        <div class="panel text-center">
+            <table style="width: 300px; margin: auto;">
+                <tr>
+                    <td>{L_TS3_ADDRESS} :</td>
+                    <td><input type="text" id="ts3-ip" value="{L_TS3_SEARCH_PROGRESS}" readonly /></td>
+                </tr>
+                <tr>
+                    <td>{L_PASSWORD} :</td>
+                    <td><input type="text" id="ts3-pwd" value="{L_TS3_SEARCH_PROGRESS}" readonly /></td>
+                </tr>
+            </table>
+            <div>
+                <a href="#" class="btn-refresh button1" onclick="ts3_refresh_server(); return false;">{L_TS3_REFRESH_INFO}</a>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+<div class="forumbg">
+    <div class="inner">
+        <ul class="topiclist">
+            <li class="header">
+                <dl>
+                    <dt>{L_TS3_LIST}</dt>
+                </dl>
+            </li>
+        </ul>
+        <div class="panel text-center">
+            <table class="table1 table-ts3-list" data-ajax-url="{U_TS3_AJAX}">
+                <thead>
+                <tr>
+                    <th>{L_TS3_NICKNAME}</th>
+                    <th>{L_TS3_CHANNEL}</th>
+                    <th>{L_TS3_LOGIN_TIME}</th>
+                    <th>{L_IP}</th>
+                    <th>{L_TS3_OS}</th>
+                    <th>{L_TS3_VERSION}</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6">{L_TS3_ANY_USER}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="centrer">
+                <a href="#" class="button1 btn-refresh" onclick="ts3_refresh_server(); return false;">{L_TS3_REFRESH_LIST}</a>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+
+<div class="forumbg" id="top5">
+    <div class="inner">
+        <ul class="topiclist">
+            <li class="header">
+                <dl>
+                    <dt>{L_TS3_TOP}</dt>
+                </dl>
+            </li>
+        </ul>
+        <div class="panel">
+            <table class="table1">
+                <thead>
+                <tr>
+                    <th width="20">#</th>
+                    <th width="100">{L_TS3_NICKNAME}</th>
+                    <th>{L_TS3_TIME}</th>
+                    <th class="text-right">{L_TS3_LAST_CNX}</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for TS3_USER in TS3_TOP %}
+                        <tr>
+                            <td class="text-center">{loop.index}</td>
+                            <td class="text-center">{TS3_USER.username}</td>
+                            <td class="text-center">{TS3_USER.time}</td>
+                            <td class="text-right">{TS3_USER.last_cnx}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div><br>
+
+<!-- INCLUDE overall_footer.html -->
